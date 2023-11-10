@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TAREA1.View.PersonaPage"
+             BackgroundColor="White">
+    <VerticalStackLayout Padding="15">
+        <ActivityIndicator IsRunning="{Binding LoadingEsVisible}" IsVisible="{Binding LoadingEsVisible}" Color="#39A7FF" HeightRequest="30" />
+        <Label Text="Nombre" FontSize="15" />
+        <Entry Placeholder="Ingrese su nombre...." FontSize="15" Margin="0,0,0,10" Text="{Binding PersonaDTO.Nombre}" />
+        <Label Text="Apellido" FontSize="15" />
+        <Entry Placeholder="Ingrese su apellido...." FontSize="15" Margin="0,0,0,10" Text="{Binding PersonaDTO.Apellido}" />
+        <Label Text="Edad" FontSize="15" />
+        <Entry Placeholder="Ingrese su edad...." FontSize="15" Keyboard="Numeric" Margin="0,0,0,10" Text="{Binding PersonaDTO.Edad}" />
+        <Label Text="Correo" FontSize="15" />
+        <Entry Placeholder="Ingrese su correo...." FontSize="15" Margin="0,0,0,10" Text="{Binding PersonaDTO.Correo}" />
+        <Label Text="Direccion" FontSize="15" />
+        <Entry Placeholder="Ingrese direccion...." FontSize="15" Margin="0,0,0,10" Text="{Binding PersonaDTO.Direccion}" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <Button Text="Guardar" Command="{Binding GuardarCommand}" BackgroundColor="#39A7FF" CornerRadius="10" TextColor="White" WidthRequest="100" HeightRequest="70" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
